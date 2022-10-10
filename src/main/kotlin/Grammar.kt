@@ -12,13 +12,13 @@ abstract class Grammar(
 
     abstract fun parse(sequence: CharSequence): List<Int>
 
-    fun produce(code: List<Int>): List<Symbol> {
+    open fun produce(code: List<Int>): List<Symbol> {
         var list = listOf<Symbol>(initialSymbol)
         for (i in code) list = rules[i].applyTo(list)
         return list
     }
 
-    fun produceStepByStep(code: List<Int>): Sequence<List<Symbol>> {
+    open fun produceStepByStep(code: List<Int>): Sequence<List<Symbol>> {
         var list = listOf<Symbol>(initialSymbol)
         return sequence {
             yield(list)

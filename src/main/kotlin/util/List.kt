@@ -20,3 +20,5 @@ fun <T> List<T>.replace(startIndex: Int, replaceSize: Int, newValue: List<T>) = 
 }
 
 fun <T> List<T>.twice() = this + this
+
+infix fun <A, B> Collection<A>.combine(other: Collection<B>) = flatMap { a -> List(other.size) { a } zip other }
