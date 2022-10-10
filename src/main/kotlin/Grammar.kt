@@ -1,12 +1,12 @@
 import Grammar.*
 import util.replace
 
-abstract class Grammar {
-
-    abstract val terminals: List<Terminal>
-    abstract val nonTerminals: List<NonTerminal>
-    abstract val rules: List<Rule>
-    abstract val initialSymbol: NonTerminal
+abstract class Grammar(
+    val terminals: List<Terminal>,
+    val nonTerminals: List<NonTerminal>,
+    val rules: List<Rule>,
+    val initialSymbol: NonTerminal
+) {
 
     abstract fun test(sequence: CharSequence): Boolean
 
@@ -75,6 +75,7 @@ infix fun Symbol.produces(product: Symbol) = Rule(this.list(), product.list())
 fun List<Symbol>.present(separator: String = "") = if (isEmpty()) "ε" else joinToString(separator) { symbol ->
     when(symbol) {
         is Terminal -> symbol.string
-        is NonTerminal -> "<${symbol.string}>"
+        //is NonTerminal -> "<${symbol.string}>"
+        is NonTerminal -> symbol.string
     }
 }
