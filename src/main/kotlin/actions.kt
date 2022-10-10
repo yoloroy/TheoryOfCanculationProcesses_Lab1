@@ -1,6 +1,6 @@
 import kotlin.system.exitProcess
 
-private val grammar = Task11Grammar()
+private val grammar = Task11FsmGrammar()
 
 fun testSequenceAction() {
     println("Введите строку для теста соответсвия грамматике")
@@ -73,22 +73,6 @@ fun appInfoAction() {
         .sortedBy(TaskAction::code)
         .map(TaskAction::label)
         .forEach(::println)
-}
-
-fun produceSequenceByNAction() {
-    val n = readInput<Int, NumberFormatException>(
-        map = String::toInt,
-        onError = { println("n должно являться целочисленным числом в пределах от ${Int.MIN_VALUE} до ${Int.MAX_VALUE}") },
-        inputCall = "Введите n:"
-    )
-    val producer = grammar.randomProducerByN(n)
-    var finalSequence: String
-    do {
-        finalSequence = producer.next().present("")
-        println("Цепочка: $finalSequence")
-        println("Если хотите перегенерировать цепочку - введите пустую строку, иначе - выход из опции")
-    } while (readln().isEmpty())
-    println("Конечная цепочка: $finalSequence")
 }
 
 private inline fun <T : Any, reified E: RuntimeException> readInput(

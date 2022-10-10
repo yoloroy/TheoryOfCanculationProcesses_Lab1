@@ -28,11 +28,6 @@ enum class TaskAction(
         label = "5 - Просмотреть пошагово создание цепочки по заданному коду",
         execute = ::produceSequenceStepByStepAction
     ),
-    ProduceSequenceByN(
-        code = 6,
-        label = "6 - Создать цепочку по заданному N",
-        execute = ::produceSequenceByNAction
-    ),
     ExitAction(
         code = 0,
         label = "0 - Выйти из программы",
