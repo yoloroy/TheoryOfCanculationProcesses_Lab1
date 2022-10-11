@@ -1,6 +1,6 @@
 import kotlin.system.exitProcess
 
-private val grammar = Task11FsmGrammar()
+private val grammar = Lab2Task11FsmGrammar()
 
 fun testSequenceAction() {
     println("Введите строку для теста соответсвия грамматике")

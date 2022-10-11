@@ -5,7 +5,7 @@ import util.twice
 /**
  * Definition: `L(G)={a[1]a[2]…a[n]a[1]a[2]…a[n]| a[i]∈{c, d}}`
  */
-class Task11Grammar : Grammar(
+class Lab1Task11Grammar : Grammar(
     terminals = listOf(c, d),
     nonTerminals = listOf(Initial, Factory, Middle, End, CGoingToFinish, DGoingToFinish, C, D),
     initialSymbol = Initial,

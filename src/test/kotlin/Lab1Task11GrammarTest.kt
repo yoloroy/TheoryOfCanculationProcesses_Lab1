@@ -2,9 +2,9 @@ import org.junit.jupiter.api.Test
 
 import org.junit.jupiter.api.Assertions.*
 
-internal class Task11GrammarTest { // TODO
+internal class Lab1Task11GrammarTest { // TODO
 
-    private val grammar get() = Task11Grammar()
+    private val grammar get() = Lab1Task11Grammar()
 
     @Test
     fun produce() {

@@ -8,7 +8,7 @@
  * |    B   | B | - | - | Z |
  * |    Z   | - | B | A | - |
  */
-class Task11FsmGrammar : FsmGrammar(
+class Lab2Task11FsmGrammar : FsmGrammar(
     initialSymbol = S,
     alphabet = listOf(zero, one, two, three),
     states = listOf(S, A, B, Z),
