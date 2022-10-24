@@ -7,7 +7,7 @@
     * [Класс с решением](./src/main/kotlin/Lab1Task11Grammar.kt)
     * [Тесты](./src/test/kotlin/Lab1Task11GrammarTest.kt)
 2. [Лабораторная и теория по ней](./readme/Lab2.docx)
-    * :white_check_mark: **Готово к сдаче**
+    * :sparkles: **Готово к сдаче**
     * Последний коммит по лабораторной [0bca924](0bca92415596d7a103ee4afe6d2d701e0940537d)
     * [Класс с решением](./src/main/kotlin/Lab2Task11FsmGrammar.kt)
 3. [Лабораторная и теория по ней](./readme/Lab4.docx)
